@@ -1,4 +1,6 @@
-# MediFormGen: a VBA-Powered Rehabiliation Clinic Management Software - Featuring Word Document Autocompletion and Database Integration
+# MediFormGen: a VBA-Powered Rehabiliation Clinic Management Software 
+
+### Featuring Word Document Autocompletion and Database Integration
 
 ## Overview
 
