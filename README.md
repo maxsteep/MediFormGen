@@ -27,6 +27,14 @@ This project is a Microsoft Word-based solution designed to automate the generat
 *   **File Naming and Organization:**  Generated documents are saved in folders named according to the format: "\[Client Name] - \[Client Address]". File names follow a similar structure, based on the client name, invoice number, and other relevant information.
 *   **Error Handling:**  The system includes basic error handling, such as displaying an error message if the invoice/order number allocation logic encounters an unexpected scenario (e.g., running out of numbers, although this is unlikely).
 *   **Document Regeneration:** In the event of accidental deletion or loss of generated documents, the system can recreate them. By using the data stored in the local database (client information, service details, invoice numbers, etc.) and the original document templates, the VBA script can repopulate the templates and generate new Word files that are identical to the lost originals.
+*   **Canadian Calendar Handling with Holiday and Leap Year Support:**
+    *   **Leap Year Adjustment:** The VBA code accurately calculates leap years to ensure correct date calculations across different years.
+    *   **Holiday Integration:** The system incorporates a comprehensive list of Canadian federal and provincial holidays.
+        *   **Federal Holidays:**  New Year's Day, Good Friday, Easter Monday (optional), Victoria Day, Canada Day, Labour Day, Thanksgiving Day, Remembrance Day (optional), Christmas Day, Boxing Day.
+        *   **Provincial/Territorial Holidays:** The code considers region-specific holidays.
+    *   **Holiday Impact on Invoice/Order Numbers:** The logic for generating invoice/order numbers dynamically adjusts to skip holidays. If a configured business day falls on a holiday, the system automatically allocates the number to the next available business day, maintaining the sequence and preventing gaps or duplicates.
+    * **Configurable Province:** User can specify the province for which the invoices are generated. This selection determines which set of provincial holidays are considered during the invoice/order number allocation and date calculations.
+
 
 ## Showcase
 
